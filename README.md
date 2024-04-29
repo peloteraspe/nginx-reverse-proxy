@@ -7,6 +7,9 @@ This setup provides a reverse proxy for multiple services using docker. It uses 
 > **NOTE**: The commands assume you are using Linux.
 
 ### 1. Run the contained script
+```sh
+chmod +x ./prepare.sh
+```
 
 ```sh
 ./prepare.sh
