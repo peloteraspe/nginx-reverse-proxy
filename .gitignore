@@ -1,0 +1,5 @@
+.env
+vhost.d/*_location
+vhost.d/default
+*.conf
+certs

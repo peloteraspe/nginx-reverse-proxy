@@ -1,0 +1,6 @@
+underscores_in_headers on;
+
+client_max_body_size 5500M;
+proxy_read_timeout 3600s;
+proxy_connect_timeout 3600s;
+proxy_send_timeout 3600s;

@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  nginx-proxy:
+    ports:
+      - "443:443/tcp"
+    volumes:
+      - ~/nginx-proxy/certs:/etc/nginx/certs:rw
+    labels:
+      - com.githun.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy
+
+  letsencrypt:
+    container_name: letsencrypt
+    image: jrcs/letsencrypt-nginx-proxy-companion
+    restart: unless-stopped
+    volumes:
+      - ~/nginx-proxy/certs:/etc/nginx/certs:rw
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    volumes_from:
+      - nginx-proxy:rw
+    networks:
+      - nginx-proxy
