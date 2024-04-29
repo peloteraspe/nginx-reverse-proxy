@@ -27,7 +27,7 @@ COMPOSE_FILE=docker-compose.yml:docker-compose-https.yml
 #### 2.2 HTTP
 
 By default this setup will expose the Nginx reverse proxy on the default HTTP port `80`.
-If you want to change the port to a different value you can create a file named  `.env` and add the following to e.g. expose it over port `9000`:
+If you want to change the port to a different value you can in file named  `.env`, add the following to e.g. expose it over port `9000`:
 
 ```
 HTTP_PORT=9000
